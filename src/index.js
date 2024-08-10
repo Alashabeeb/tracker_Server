@@ -14,13 +14,8 @@ app.use(bodyParser.json())
 app.use(authRoutes)
 app.use(trackRoutes)
 
-const mongoURI = `mongodb+srv://Karl123:PasswordPassword123@cluster0-9zazp.mongodb.net/test?retryWrites=true&w=majority`
-mongoose.connect(mongoURI, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    //I added this because an error message said so
-    useUnifiedTopology: true
-})
+const mongoURI = `mongodb+srv://alas:mp5glj9hvuEu6IdU@alas.1hbfi.mongodb.net/?retryWrites=true&w=majority&appName=Alas`
+mongoose.connect(mongoURI, {})
 mongoose.connection.on("connected", () => {
     console.log("Connected to mongo instance")
 })
